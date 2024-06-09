@@ -5,7 +5,7 @@ const Index = () => {
   return (
     <Box>
       {/* Navigation Bar */}
-      <Box bg="pink.600" color="white" py={4}>
+      <Box bg="#fff1e5" color="white" py={4}>
         <Container maxW="container.xl">
           <HStack spacing={8}>
             <Heading size="md">Financial Times</Heading>
@@ -25,13 +25,13 @@ const Index = () => {
       <Container maxW="container.xl" mt={8}>
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
           {/* Featured Article */}
-          <Box gridColumn={{ md: "span 2" }} bg="gray.100" p={4} borderRadius="md">
+          <Box gridColumn={{ md: "span 2" }} bg="#fff1e5" p={4} borderRadius="md">
             <Heading size="lg" mb={2}>Featured Article</Heading>
             <Text>Summary of the featured article goes here...</Text>
           </Box>
 
           {/* Sidebar */}
-          <Box bg="gray.100" p={4} borderRadius="md">
+          <Box bg="#fff1e5" p={4} borderRadius="md">
             <Heading size="md" mb={2}>Trending</Heading>
             <VStack align="start" spacing={2}>
               <Link>Trending Article 1</Link>
@@ -44,27 +44,27 @@ const Index = () => {
 
         {/* Grid of Smaller Articles */}
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8} mt={8}>
-          <Box bg="gray.100" p={4} borderRadius="md">
+          <Box bg="#fff1e5" p={4} borderRadius="md">
             <Heading size="md" mb={2}>Article 1</Heading>
             <Text>Summary of article 1...</Text>
           </Box>
-          <Box bg="gray.100" p={4} borderRadius="md">
+          <Box bg="#fff1e5" p={4} borderRadius="md">
             <Heading size="md" mb={2}>Article 2</Heading>
             <Text>Summary of article 2...</Text>
           </Box>
-          <Box bg="gray.100" p={4} borderRadius="md">
+          <Box bg="#fff1e5" p={4} borderRadius="md">
             <Heading size="md" mb={2}>Article 3</Heading>
             <Text>Summary of article 3...</Text>
           </Box>
-          <Box bg="gray.100" p={4} borderRadius="md">
+          <Box bg="#fff1e5" p={4} borderRadius="md">
             <Heading size="md" mb={2}>Article 4</Heading>
             <Text>Summary of article 4...</Text>
           </Box>
-          <Box bg="gray.100" p={4} borderRadius="md">
+          <Box bg="#fff1e5" p={4} borderRadius="md">
             <Heading size="md" mb={2}>Article 5</Heading>
             <Text>Summary of article 5...</Text>
           </Box>
-          <Box bg="gray.100" p={4} borderRadius="md">
+          <Box bg="#fff1e5" p={4} borderRadius="md">
             <Heading size="md" mb={2}>Article 6</Heading>
             <Text>Summary of article 6...</Text>
           </Box>
@@ -72,7 +72,7 @@ const Index = () => {
       </Container>
 
       {/* Footer */}
-      <Box bg="pink.600" color="white" py={4} mt={8}>
+      <Box bg="#fff1e5" color="white" py={4} mt={8}>
         <Container maxW="container.xl">
           <Flex justify="space-between">
             <Text>&copy; 2023 Financial Times</Text>
