@@ -1,19 +1,90 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Box, Container, Flex, Heading, HStack, Link, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
-      </VStack>
-    </Container>
+    <Box>
+      {/* Navigation Bar */}
+      <Box bg="pink.600" color="white" py={4}>
+        <Container maxW="container.xl">
+          <HStack spacing={8}>
+            <Heading size="md">Financial Times</Heading>
+            <HStack spacing={4}>
+              <Link as={RouterLink} to="/">Home</Link>
+              <Link as={RouterLink} to="/world">World</Link>
+              <Link as={RouterLink} to="/business">Business</Link>
+              <Link as={RouterLink} to="/tech">Tech</Link>
+              <Link as={RouterLink} to="/markets">Markets</Link>
+              <Link as={RouterLink} to="/opinion">Opinion</Link>
+            </HStack>
+          </HStack>
+        </Container>
+      </Box>
+
+      {/* Main Content Area */}
+      <Container maxW="container.xl" mt={8}>
+        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
+          {/* Featured Article */}
+          <Box gridColumn={{ md: "span 2" }} bg="gray.100" p={4} borderRadius="md">
+            <Heading size="lg" mb={2}>Featured Article</Heading>
+            <Text>Summary of the featured article goes here...</Text>
+          </Box>
+
+          {/* Sidebar */}
+          <Box bg="gray.100" p={4} borderRadius="md">
+            <Heading size="md" mb={2}>Trending</Heading>
+            <VStack align="start" spacing={2}>
+              <Link>Trending Article 1</Link>
+              <Link>Trending Article 2</Link>
+              <Link>Trending Article 3</Link>
+              <Link>Trending Article 4</Link>
+            </VStack>
+          </Box>
+        </SimpleGrid>
+
+        {/* Grid of Smaller Articles */}
+        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8} mt={8}>
+          <Box bg="gray.100" p={4} borderRadius="md">
+            <Heading size="md" mb={2}>Article 1</Heading>
+            <Text>Summary of article 1...</Text>
+          </Box>
+          <Box bg="gray.100" p={4} borderRadius="md">
+            <Heading size="md" mb={2}>Article 2</Heading>
+            <Text>Summary of article 2...</Text>
+          </Box>
+          <Box bg="gray.100" p={4} borderRadius="md">
+            <Heading size="md" mb={2}>Article 3</Heading>
+            <Text>Summary of article 3...</Text>
+          </Box>
+          <Box bg="gray.100" p={4} borderRadius="md">
+            <Heading size="md" mb={2}>Article 4</Heading>
+            <Text>Summary of article 4...</Text>
+          </Box>
+          <Box bg="gray.100" p={4} borderRadius="md">
+            <Heading size="md" mb={2}>Article 5</Heading>
+            <Text>Summary of article 5...</Text>
+          </Box>
+          <Box bg="gray.100" p={4} borderRadius="md">
+            <Heading size="md" mb={2}>Article 6</Heading>
+            <Text>Summary of article 6...</Text>
+          </Box>
+        </SimpleGrid>
+      </Container>
+
+      {/* Footer */}
+      <Box bg="pink.600" color="white" py={4} mt={8}>
+        <Container maxW="container.xl">
+          <Flex justify="space-between">
+            <Text>&copy; 2023 Financial Times</Text>
+            <HStack spacing={4}>
+              <Link>Contact</Link>
+              <Link>Privacy Policy</Link>
+              <Link>Terms of Service</Link>
+            </HStack>
+          </Flex>
+        </Container>
+      </Box>
+    </Box>
   );
 };
 
